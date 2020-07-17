@@ -30,7 +30,7 @@ Amplify.configure({
     API: {
         endpoints: [
             {
-                name: "Ayuda Mex",
+                name: "cause",
                 endpoint: config.apiGateway.URL,
                 region: config.apiGateway.REGION
             },

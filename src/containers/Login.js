@@ -7,6 +7,8 @@ import { useAppContext } from "../libs/contextLib";
 import { useFormFields } from "../libs/hooksLib";
 import { onError } from "../libs/errorLib";
 import "./Login.css";
+import FacebookButton from "../components/FacebookButton";
+
 
 export default function Login() {
     const history = useHistory();
@@ -34,11 +36,17 @@ export default function Login() {
             onError(e);
             setIsLoading(false);
         }
-    }
 
+        
+    }
     return (
+
+
+        
         <div className="Login">
+          
             <form onSubmit={handleSubmit}>
+
                 <FormGroup controlId="email" bsSize="large">
                     <ControlLabel>Email</ControlLabel>
                     <FormControl

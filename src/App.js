@@ -1,3 +1,4 @@
+import config from "./config";
 import Routes from "./Routes";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -8,18 +9,22 @@ import { AppContext } from "./libs/contextLib";
 import { onError } from "./libs/errorLib";
 
 
+
 function App() {
     const [isAuthenticated, userHasAuthenticated] = useState(false);
 
     function handleLogout() {
   userHasAuthenticated(false);
-}
+    }
+
+
+   
     return (
         <div className="App container">
             <Navbar fluid collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <Link to="/">Scratch</Link>
+                        <Link to="/">AyudaMex</Link>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
@@ -44,5 +49,7 @@ function App() {
             </AppContext.Provider>
         </div>
     );
+
+
 }
 export default App;
